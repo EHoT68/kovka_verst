@@ -1,0 +1,751 @@
+*
+   margin: 0
+   padding: 0
+
+$color_span: #ff6b00
+
+/* FONTS  */
+
+@font-face
+   font-family: Neumann
+   src: url("/fonts/Neumann.ttf")
+
+   font-family: YesevaOne-Regular
+   src: url("/fonts/YesevaOne-Regular.ttf")
+
+   &
+      font-family: Lato-Light
+      src: url("/fonts/Lato-Light.ttf")
+
+   &
+      font-family: Lato-Regular
+      src: url("/fonts/Lato-Regular.ttf")
+
+   &
+      font-family: Lato-Bold
+      src: url("/fonts/Lato-Bold.ttf")
+
+/* MAIN-SETTINGS */
+html
+   -webkit-box-sizing: border-box
+   -moz-box-sizing: border-box
+   box-sizing: border-box
+
+*,
+*:before,
+*:after
+   -webkit-box-sizing: inherit
+   -moz-box-sizing: inherit
+   box-sizing: inherit
+
+body
+   margin: 0
+   padding: 0
+   font-family: "Lato", sans-serif
+   font-weight: 400
+   letter-spacing: 0.03em
+   background: #302b2b
+
+a
+   background-color: transparent
+   text-decoration: none
+   color: #fff
+
+ul,
+li
+   list-style: none
+   margin: 0
+   padding: 0
+
+img
+   display: block
+   border-style: none
+   margin-right: 0
+
+button,
+input,
+optgroup,
+select,
+textarea
+   margin: 0
+   padding: 0
+   outline: none
+   border: none
+
+.d-flex
+   display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+   display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+   display: -ms-flexbox; /* TWEENER - IE 10 */
+   display: -webkit-flex; /* NEW - Chrome */
+   display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+.container
+   width: 1200px
+   margin: 0 auto
+   padding: 0 15px
+   position: relative
+
+/* /MAIN-SETTINGS */
+
+.header__wrapper
+   justify-content: space-between
+
+   &,
+   .header-item,
+   .header-item-nav__list
+      align-items: center
+
+.container-header
+   width: 1200px
+   margin: 0 auto
+   padding: 0px 15px
+
+/* CONTENT */
+header
+   padding: 13px 0
+   background: rgb(48, 42, 42)
+   background: 90deg,rgba(48, 42, 42, 1) 0%,rgba(255, 255, 255, 0.19091386554621848) 46%,rgba(255, 255, 255, 0.27494747899159666) 61%,rgba(48, 42, 42, 1) 100%
+
+   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#302a2a",endColorstr="#302a2a",GradientType=1)
+
+.header__wrapper
+   flex-direction: column
+
+.header-item
+   width: 100%
+   justify-content: space-between
+
+   .headr-tel
+      font-size: 22px
+      line-height: 30px
+
+   nav
+      width: 100%
+
+   &__logo
+      font-size: 30px
+      position: relative
+
+      &:hover h1
+         color: $color_span
+
+      img
+         width: 70px
+         height: 70px
+
+      h1
+         font-family: Neumann
+         font-style: normal
+         font-weight: normal
+         font-size: 30px
+         line-height: 34px
+         color: #FFFFFF
+         padding-left: 20px
+         position: relative
+         padding-top: 5px
+
+         span
+            position: absolute
+            top: 29px
+            font-family: Open Sans
+            font-size: 16px
+            line-height: 34px
+            letter-spacing: 0.14em
+
+.social-flex-wrap
+   display: flex
+   a > i
+      padding: 10px
+      color: #fff
+      font-size: 20px
+
+      &:hover
+         color: $color_span
+
+.btn-call-back
+   width: 220px
+   height: 60px
+   background: $color_span
+   color: white
+   font-family: Open Sans
+   font-style: normal
+   font-weight: bold
+   font-size: 16px
+   line-height: 22px
+   text-align: center
+   padding: 10px
+
+.header-item-nav__list
+   padding: 15px 0 10px
+   justify-content: space-between
+
+   & a
+      align-items: center
+      font-size: 16px
+      line-height: 22px
+      color: #FFFFFF
+
+      &:hover
+         color: $color_span
+
+   & a i
+      margin-left: 5px
+      font-size: 15px
+
+.header-item-info
+   margin-left: 26px
+   font-size: 17px
+
+/* top-banner */
+
+.top-banner
+   background: url(../img/main-banner-1.jpg) no-repeat center center/ cover
+   //height: 593px
+
+   &-title
+      font-family: unset
+      font-size: 50px
+      font-style: normal
+      text-transform: uppercase
+      font-weight: 600
+      line-height: 59px
+      letter-spacing: 0.03em
+      text-align: left
+      color: white
+      padding: 90px 0px 10px 0px
+      margin-top: 0px
+
+.tagline-title
+   font-family: "Lato", sans-serif
+   font-size: 20px
+   font-style: normal
+   font-weight: 400
+   line-height: 20px
+   letter-spacing: 0.03em
+   text-align: left
+   color: white
+   padding: 0px 0px 30px 0px
+
+.top-banner-btn
+   width: 220px
+   height: 60px
+   color: $color_span
+   border: 2px solid $color_span
+   background: none
+
+.banner-adv-flex-box
+   display: flex
+   padding-top: 69px
+   padding-bottom: 73px
+   width: 80%
+
+.adv-item
+   display: flex
+   width: 100%
+
+   &-title
+      margin: 0
+      padding-left: 15px
+      padding-right: 30px
+      font-style: normal
+      font-weight: normal
+      font-size: 16px
+      line-height: 22px
+      color: #ffffff
+
+//наши изделия
+
+.services
+   position: relative
+   padding-bottom: 80px
+
+.services-title-head
+   display: flex
+   justify-content: center
+   align-items: center
+   padding: 80px 0 60px
+
+   &-title
+      font-family: "Neumann"
+      font-style: normal
+      font-weight: normal
+      font-size: 40px
+      line-height: 59px
+      text-transform: uppercase
+      color: #FFFFFF
+      padding: 0 20px
+      margin: 0
+
+.services-background-1, .services-background-2
+   position: absolute
+   background: $color_span
+   mix-blend-mode: screen
+   opacity: 0.4
+   filter: blur(300px)
+   width: 749px
+   height: 749px
+   top: 22px
+   left: -400px
+   z-index: -2
+
+.services-background-2
+   top: 418px
+   left: 800px
+
+.tabsmenu li
+   padding: 12px 30px
+   margin-right: 10px
+   display: -webkit-box
+   display: -ms-flexbox
+   display: flex
+   -webkit-box-align: center
+   -ms-flex-align: center
+   align-items: center
+   -webkit-box-pack: center
+   -ms-flex-pack: center
+   justify-content: center
+   -webkit-user-select: none
+   user-select: none
+   cursor: pointer
+   font-size: 16px
+   line-height: 22px
+   text-align: center
+   font-feature-settings: 'pnum' on, 'lnum' on
+   color: #FFFFFF
+   border: solid 1px #686562
+
+.tabsmenu
+   display: flex
+   justify-content: center
+   padding-bottom: 40px
+
+   .active
+      color: #fff
+      border: solid 2px $color_span
+      cursor: default
+.tab-cont > div[hidden]
+   display: none
+
+.tab-cont-box-1
+   display: grid
+   grid-template-columns: repeat(4,1fr)
+   grid-template-rows: repeat(3,1fr)
+   grid-gap: 10px
+
+   a
+      position: relative
+
+      img
+         opacity: 0.7
+         width: 100%
+         height: 100%
+
+   div
+      position: absolute
+      z-index: 2
+      top: 0
+      width: 100%
+      height: 100%
+
+      &:hover
+         background: $color_span
+         opacity: 0.7
+
+      h3
+         display: flex
+         justify-content: center
+         margin: 0
+         height: 100%
+         align-items: center
+         font-family: "Neumann"
+         font-size: 32px
+         line-height: 47px
+         text-align: center
+         text-transform: uppercase
+         color: #FFFFFF
+         text-shadow: 0px 4px 15px rgba(0, 0, 0, 0.8)
+
+   .tab-cont-item-1
+      grid-row: span 2
+
+   .tab-cont-item-3
+      grid-column: span 2
+
+   .tab-cont-item-6
+      grid-row: span 2
+
+   .tab-cont-item-8
+      grid-column: span 2
+
+// как мы работаем
+
+.time-work
+   background: #242424
+
+   .time-work-title-head
+      display: flex
+      justify-content: center
+      align-items: center
+      padding: 80px 0 60px
+
+.time-work-content
+   display: grid
+   grid-template-columns: repeat(3,1fr)
+   grid-template-rows: repeat(2,1fr)
+   grid-gap: 20px
+   padding-bottom: 80px
+
+   .time-work-content-box
+      align-content: center
+      align-items: center
+
+   figure, .time-work-content-box
+      display: flex
+      flex-direction: column
+      background: #393939
+      flex-wrap: wrap
+      position: relative
+      justify-content: space-evenly
+
+      .figura-las
+         top: 40px
+         left: 80px
+
+      .figura-pen1
+         top: -40px
+         left: 175px
+         transform: rotate(-20deg)
+
+      .figura-pen2
+         top: 12px
+         left: 200px
+
+      .figura-nakov
+         top: -8px
+         left: 100px
+
+      img
+         position: absolute
+         top: -18px
+         left: 120px
+
+      p
+         font-family: Neumann
+         font-style: normal
+         font-weight: normal
+         font-size: 80px
+         line-height: 118px
+         font-feature-settings: 'pnum' on, 'lnum' on
+         color: #FFFFFF
+         padding-top: 26px
+         padding-left: 30px
+
+      figcaption
+         font-family: Open Sans
+         font-style: normal
+         font-weight: normal
+         font-size: 16px
+         line-height: 22px
+         font-feature-settings: 'pnum' on, 'lnum' on
+         color: #FFFFFF
+         padding: 0 30px 44px
+
+      h4
+         font-family: Neumann
+         font-style: normal
+         font-weight: normal
+         font-size: 23px
+         line-height: 37px
+         text-align: center
+         text-transform: uppercase
+         color: $color_span
+         padding: 40px 30px 10px
+
+      h5
+         font-family: Open Sans
+         font-style: normal
+         font-weight: normal
+         font-size: 16px
+         line-height: 22px
+         text-align: center
+         font-feature-settings: 'pnum' on, 'lnum' on
+         color: #FFFFFF
+         padding: 0 40px 20px
+
+      .time-work-content-btn
+         font-family: Open Sans
+         font-style: normal
+         font-weight: bold
+         font-size: 16px
+         line-height: 22px
+         text-align: center
+         font-feature-settings: 'pnum' on, 'lnum' on
+         color: #FFFFFF
+         background: $color_span
+         padding: 19px 38px
+         width: 60%
+         margin-bottom: 30px
+
+// расчитать заказ
+
+.calc-order
+   background-image: url(../img/main-buner-2.jpg)
+   background-position: center
+   background-size: cover
+   background-repeat: no-repeat
+   position: relative
+   z-index: -5
+
+   &-background-1, &-background-2
+      position: absolute
+      background: $color_span
+      mix-blend-mode: screen
+      opacity: 0.4
+      filter: blur(300px)
+      width: 749px
+      height: 749px
+      top: 117px
+      left: -590px
+      z-index: -2
+
+   &-background-2
+      top: -400px
+      left: 1000px
+
+   &__box
+      display: flex
+      flex-direction: row-reverse
+
+      &-content
+
+         p
+            font-family: Open Sans
+            font-style: normal
+            font-weight: normal
+            font-size: 16px
+            line-height: 22px
+            text-align: center
+            font-feature-settings: 'pnum' on, 'lnum' on
+            color: #FFFFFF
+            padding: 0 40px 50px
+
+         form
+            display: flex
+            padding: 0 40px 50px
+            justify-content: space-between
+
+            input
+               border: solid 1px #fff
+               background: rgba(255, 255, 255, 0.1)
+               width: 30%
+               padding: 17px 22px
+               color: #fff
+
+            button
+               font-family: Open Sans
+               font-style: normal
+               font-weight: bold
+               font-size: 16px
+               line-height: 22px
+               width: 30%
+               color: #fff
+               background: $color_span
+               padding: 17px 36px
+
+   &__box-titl
+      padding: 100px 0 20px
+
+// Почему стоит обратиться к нам
+//особенности производства
+
+.down-content
+   background: #242424
+
+   .figure-box-items
+      display: grid
+      grid-template-columns: repeat(3,1fr)
+      grid-template-rows: repeat(1,1fr)
+      grid-gap: 20px
+
+      figure
+         background: #393939
+         padding: 30px 32px 50px
+
+         img
+            width: 100%
+
+         h4
+            font-family: Neumann
+            font-style: normal
+            font-weight: normal
+            font-size: 18px
+            line-height: 29px
+            text-align: center
+            text-transform: uppercase
+            color: $color_span
+
+         p
+            font-family: Open Sans
+            font-style: normal
+            font-weight: normal
+            font-size: 16px
+            line-height: 22px
+            text-align: center
+            color: #FFFFFF
+            padding: 18px 18px 0
+
+.down-content-features
+
+   .down-title-head
+      padding-bottom: 40px
+
+   p
+      font-family: Open Sans
+      font-style: normal
+      font-weight: normal
+      font-size: 16px
+      line-height: 135%
+      color: #FFFFFF
+      padding: 0 115px 80px
+
+.down-content-background-1
+   position: absolute
+   top: 638px
+   left: 800px
+   background: $color_span
+   mix-blend-mode: screen
+   opacity: 0.2
+   filter: blur(340px)
+   width: 749px
+   height: 749px
+
+//футер
+
+.footer
+   background: #1c1c1c
+
+   &-flex
+      display: flex
+
+   &-left-content
+      padding: 63px 102px 60px 0
+      width: 33%
+
+   &-right-cont
+      display: flex
+      padding: 60px 0
+      justify-content: space-between
+      width: 66%
+
+      li
+         font-family: Open Sans
+         font-style: normal
+         font-weight: normal
+         font-size: 16px
+         line-height: 22px
+         color: #FFFFFF
+         padding-bottom: 15px
+         display: flex
+         align-items: center
+
+      ol > li > svg
+         margin-right: 15px
+
+      ol > li:first-child
+         font-weight: bold
+         font-size: 22px
+         line-height: 30px
+
+//@media(max-width: 1600px)
+
+@media(max-width: 1200px)
+   .container
+      width: 960px
+      padding: 35px 15px
+
+   &-header
+      width: 960px
+
+   .header__wrapper
+      justify-content: space-evenly
+
+   .header-item-nav__list li a
+      font-size: 14px
+
+   .header-item-info
+      font-size: 15px
+      margin-left: 19 px
+
+   .header-item-nav__list li
+      margin-left: 20px
+
+@media(max-width: 992px)
+   .container
+      width: 720px
+      padding: 30px 15px
+
+   &-header
+      width: 720px
+
+   .header__wrapper,
+   .header-item,
+   .header-item-nav__list
+      align-items: center
+      flex-wrap: wrap
+      justify-content: flex-end
+
+   .header-item__nav
+      width: 85%
+
+   .header-item__logo
+      width: 15%
+
+   .header-item
+      width: 100%
+
+   &-nav__list li
+      margin-left: 37 px
+
+@media(max-width: 768px)
+   .container
+      width: 540px
+      padding: 25px 15px
+
+   &-header
+      width: 540px
+
+   .header-item-nav__list li a
+      font-size: 13px
+
+   .header-item-nav__list li
+      margin-left: 7px
+
+   .header-item__logo
+      font-size: 27px
+
+@media(max-width: 576px)
+   .container
+      width: 320px
+      padding: 20px 15px
+
+   &-header
+      width: 320px
+
+   .header-item__logo
+      width: 26%
+      margin: 0 auto
+
+   .header-item__nav
+      width: 100%
+
+   .header-item-nav__list
+      justify-content: space-evenly
+      margin: 15px 0
+
+   .header-item
+      justify-content: center
+
+   &-info
+      margin-left: 0px
+
+//@media(max-width: 478px)
