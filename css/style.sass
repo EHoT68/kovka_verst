@@ -80,7 +80,7 @@ textarea
    display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
 
 .container
-   width: 1200px
+   width: 1160px
    margin: 0 auto
    padding: 0 15px
    position: relative
@@ -175,9 +175,29 @@ header
    text-align: center
    padding: 10px
 
+   &:hover
+      background: #242424
+      color: $color_span
+      border: solid 1px $color_span
+
 .header-item-nav__list
    padding: 15px 0 10px
    justify-content: space-between
+
+   li
+      position: relative
+
+      &:hover ol
+         display: block
+
+   li > ol
+      background: linear-gradient(90deg, #242424 10%, $color_span )
+      border: solid 1px $color_span
+      padding: 10px
+      position: absolute
+      z-index: 5
+      width: 200px
+      display: none
 
    & a
       align-items: center
@@ -233,6 +253,10 @@ header
    border: 2px solid $color_span
    background: none
 
+   &:hover
+      background: $color_span
+      color: #fff
+
 .banner-adv-flex-box
    display: flex
    padding-top: 69px
@@ -252,6 +276,9 @@ header
       font-size: 16px
       line-height: 22px
       color: #ffffff
+      background: linear-gradient(90deg,#242424 10%, #ff6b00)
+      opacity: 0.8
+      border-radius: 15px
 
 //наши изделия
 
@@ -314,6 +341,9 @@ header
    color: #FFFFFF
    border: solid 1px #686562
 
+   &:hover
+      background: $color_span
+
 .tabsmenu
    display: flex
    justify-content: center
@@ -323,10 +353,11 @@ header
       color: #fff
       border: solid 2px $color_span
       cursor: default
+
 .tab-cont > div[hidden]
    display: none
 
-.tab-cont-box-1
+.tab-cont-box-1, .tab-cont-box-2, .tab-cont-box-3, .tab-cont-box-4
    display: grid
    grid-template-columns: repeat(4,1fr)
    grid-template-rows: repeat(3,1fr)
@@ -381,6 +412,8 @@ header
 
 .time-work
    background: #242424
+   position: relative
+   z-index: 2
 
    .time-work-title-head
       display: flex
@@ -486,6 +519,11 @@ header
          width: 60%
          margin-bottom: 30px
 
+         &:hover
+            background: #242424
+            color: $color_span
+            outline: solid 1px $color_span
+
 // расчитать заказ
 
 .calc-order
@@ -494,7 +532,6 @@ header
    background-size: cover
    background-repeat: no-repeat
    position: relative
-   z-index: -5
 
    &-background-1, &-background-2
       position: absolute
@@ -506,7 +543,6 @@ header
       height: 749px
       top: 117px
       left: -590px
-      z-index: -2
 
    &-background-2
       top: -400px
@@ -533,6 +569,8 @@ header
             display: flex
             padding: 0 40px 50px
             justify-content: space-between
+            position: relative
+            z-index: 2
 
             input
                border: solid 1px #fff
@@ -551,6 +589,12 @@ header
                color: #fff
                background: $color_span
                padding: 17px 36px
+               cursor: pointer
+
+               &:hover
+                  background: #242424
+                  color: $color_span
+                  outline: solid 1px $color_span
 
    &__box-titl
       padding: 100px 0 20px
@@ -560,6 +604,8 @@ header
 
 .down-content
    background: #242424
+   position: relative
+   z-index: 2
 
    .figure-box-items
       display: grid
@@ -631,11 +677,24 @@ header
       padding: 63px 102px 60px 0
       width: 33%
 
+      .footer-logo
+         display: flex
+         padding-bottom: 40px
+
+         h1
+            font-size: 24px
+
+            span
+               font-size: 12px
+
    &-right-cont
       display: flex
       padding: 60px 0
       justify-content: space-between
       width: 66%
+
+      ul > li:hover a
+         color: $color_span
 
       li
          font-family: Open Sans
@@ -661,7 +720,7 @@ header
 @media(max-width: 1200px)
    .container
       width: 960px
-      padding: 35px 15px
+      padding: 0 15px
 
    &-header
       width: 960px
@@ -678,6 +737,66 @@ header
 
    .header-item-nav__list li
       margin-left: 20px
+
+   .services-title-head-title
+      font-size: 30px
+
+   .tab-cont-box-1 div h3
+      font-size: 24px
+
+   .calc-order__box-titl
+      svg
+         width: 100px
+
+   .time-work-content > figure
+      img
+         width: 60%
+         top: -10px
+         left: 100px
+
+      .figura-las
+         width: 20%
+         top: 80px
+         left: 80px
+
+      .figura-pen1
+         top: -40px
+         left: 120px
+
+      .figura-pen2
+         top: 0px
+         left: 150px
+
+      .figura-nakov
+         top: 10px
+         left: 90px
+
+   .time-work-content .time-work-content-box
+      h4
+         font-size: 18px
+
+      .time-work-content-btn
+         padding: 15px 24px
+
+   .calc-order__box-content form button
+      font-size: 15px
+      padding: 10px 10px
+
+   .down-content .figure-box-items figure h4
+      font-size: 14px
+
+   .footer-right-cont
+      padding: 40px 0
+
+   .footer-left-content
+      padding: 40px 50px 40px 0
+
+      .footer-logo h1
+         font-size: 22px
+         width: 100%
+
+      span
+         font-size: 9px
 
 @media(max-width: 992px)
    .container
