@@ -12,13 +12,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Lato&display=swap" rel="stylesheet">
     <!-- STYLES -->
-    <link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.css">
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
   <body>
     <header class="header">
-      <div class="container-header">
+      <div class="container">
         <div class="header__wrapper d-flex">
           <!-- content -->
           <div class="header-item d-flex">
@@ -39,19 +39,70 @@
           </div>
           <div class="header-item d-flex">
             <nav class="header-item__nav">
+               <input type="checkbox" class="menu-checkbox" id="menu-checkbox">
+               <label for="menu-checkbox" class="menu-checkbox-label" >
+                  <i class="fa fa-bars" aria-hidden="true"></i>
+                  <span>MENU</span>
+               </label>
               <ul class="header-item-nav__list d-flex">
-                  <li><a href="#">Кузница
-                     <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
-                  </a></li>
-                  <li><a href="#">Натуральный камень
-                     <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
-                  </a></li>
-                  <li><a href="#">Гранитная мастерская
-                     <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
-                  </a></li>
-                  <li><a href="#services">Услуги
-                     <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
-                  </a></li> <li><a href="#about">О компании</a></li>               
+               <input type="checkbox" class="menu-checkbox" id="menu-checkbox">
+               <label for="menu-checkbox" class="menu-checkbox-label-clos" >
+                  <i class="fa fa-times" aria-hidden="true"></i>
+               </label>
+                  <li>
+                     <a href="#">Кузница
+                        <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
+                     </a>
+                     <ol>
+                        <li><a href="#">item1</a></li>
+                        <li><a href="#">item2</a></li>
+                        <li><a href="#">item3</a></li>
+                        <li><a href="#">item4</a></li>
+                        <li><a href="#">item5</a></li>
+                        <li><a href="#">item6</a></li>
+                     </ol>
+                  </li>
+                  <li>
+                     <a href="#">Натуральный камень
+                        <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
+                     </a>
+                     <ol>
+                        <li><a href="#">item1</a></li>
+                        <li><a href="#">item2</a></li>
+                        <li><a href="#">item3</a></li>
+                        <li><a href="#">item4</a></li>
+                        <li><a href="#">item5</a></li>
+                        <li><a href="#">item6</a></li>
+                     </ol>
+                  </li>
+                  <li>
+                     <a href="#">Гранитная мастерская
+                        <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
+                     </a>
+                     <ol>
+                        <li><a href="#">item1</a></li>
+                        <li><a href="#">item2</a></li>
+                        <li><a href="#">item3</a></li>
+                        <li><a href="#">item4</a></li>
+                        <li><a href="#">item5</a></li>
+                        <li><a href="#">item6</a></li>
+                     </ol>
+                  </li>
+                  <li>
+                     <a href="#services">Услуги
+                        <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
+                     </a>
+                     <ol>
+                        <li><a href="#">item1</a></li>
+                        <li><a href="#">item2</a></li>
+                        <li><a href="#">item3</a></li>
+                        <li><a href="#">item4</a></li>
+                        <li><a href="#">item5</a></li>
+                        <li><a href="#">item6</a></li>
+                     </ol>
+                  </li>
+                  <li><a href="#about">О компании</a>
+                  </li>               
                   <li><a href="#">Технологии</a></li>
                   <li><a href="#">Блог</a></li>
                   <li><a href="#contacts">Контакты</a></li>
@@ -174,17 +225,161 @@
                      </div>
                   </a>
                </div>
-               <div hidden>
+               <div class="tab-cont-box-2" hidden>
                   <!--камень-->
-                  <p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer vitae elit placerat, auctor nibh ac, venenatis felis. Nulla euismod ultricies pharetra. Duis at nisi eget lorem blandit ultricies. Vivamus ex leo, molestie vel augue in, mollis pretium tellus. Phasellus semper eget augue vitae auctor. Nullam id vulputate diam, eu consectetur nisi.</p>
+                  <a class="tab-cont-item-1" href="#">
+                     <img src="img/tab-cont-lesn.png" alt="лестницы">
+                     <div>
+                        <h3>камень</h3>
+                     </div>
+                     
+                  </a>
+                  <a class="tab-cont-item-2" href="#">
+                     <img src="img/tab-cont-covEl.png" alt="кованые элементы">
+                     <div>
+                        <h3>камень</h3>
+                     </div>
+                  </a>
+                  <a class="tab-cont-item-3" href="#">
+                     <img src="img/tab-cont-vorot.png" alt="ворота">
+                     <div>
+                        <h3>камень</h3>
+                     </div>
+                  </a>
+                  <a class="tab-cont-item-4" href="#">
+                     <img src="img/tab-cont-besed.png" alt="беседки">
+                     <div>
+                        <h3>камень</h3>
+                     </div>
+                  </a>
+                  <a class="tab-cont-item-5" href="#">
+                     <img src="img/tab-cont-zabor.png" alt="заборы">
+                     <div>
+                        <h3>камень</h3>
+                     </div>
+                  </a>
+                  <a class="tab-cont-item-6" href="#">
+                     <img src="img/tab-cont-krilco.png" alt="крыльцо">
+                     <div>
+                        <h3>камень</h3>
+                     </div>
+                  </a>
+                  <a class="tab-cont-item-7" href="#">
+                     <img src="img/tab-cont-dveri.png" alt="двери">
+                     <div>
+                        <h3>камень</h3>
+                     </div>
+                  </a>
+                  <a class="tab-cont-item-8" href="#">
+                     <img src="img/tab-cont-balkon.png" alt="балконы">
+                     <div>
+                        <h3>камень</h3>
+                     </div>
+                  </a>
                </div>
-               <div hidden>
+               <div class="tab-cont-box-3" hidden>
                   <!--гранит-->
-                  <p>Aenean sit amet rutrum elit. Nunc viverra enim fringilla, feugiat sapien a, dictum ligula. Fusce in elit justo. Duis gravida ipsum sit amet nibh efficitur, at pharetra orci aliquet. Ut maximus, sem eget lobortis consequat, sem quam dignissim neque, at rhoncus odio erat vitae justo. Cras sed urna feugiat, consectetur metus ac, elementum nisi.</p>
+                  <a class="tab-cont-item-1" href="#">
+                     <img src="img/tab-cont-lesn.png" alt="лестницы">
+                     <div>
+                        <h3>гранит</h3>
+                     </div>
+                     
+                  </a>
+                  <a class="tab-cont-item-2" href="#">
+                     <img src="img/tab-cont-covEl.png" alt="кованые элементы">
+                     <div>
+                        <h3>гранит</h3>
+                     </div>
+                  </a>
+                  <a class="tab-cont-item-3" href="#">
+                     <img src="img/tab-cont-vorot.png" alt="ворота">
+                     <div>
+                        <h3>гранит</h3>
+                     </div>
+                  </a>
+                  <a class="tab-cont-item-4" href="#">
+                     <img src="img/tab-cont-besed.png" alt="беседки">
+                     <div>
+                        <h3>гранит</h3>
+                     </div>
+                  </a>
+                  <a class="tab-cont-item-5" href="#">
+                     <img src="img/tab-cont-zabor.png" alt="заборы">
+                     <div>
+                        <h3>гранит</h3>
+                     </div>
+                  </a>
+                  <a class="tab-cont-item-6" href="#">
+                     <img src="img/tab-cont-krilco.png" alt="крыльцо">
+                     <div>
+                        <h3>гранит</h3>
+                     </div>
+                  </a>
+                  <a class="tab-cont-item-7" href="#">
+                     <img src="img/tab-cont-dveri.png" alt="двери">
+                     <div>
+                        <h3>гранит</h3>
+                     </div>
+                  </a>
+                  <a class="tab-cont-item-8" href="#">
+                     <img src="img/tab-cont-balkon.png" alt="балконы">
+                     <div>
+                        <h3>гранит</h3>
+                     </div>
+                  </a>
                </div>
-               <div hidden>
+               <div class="tab-cont-box-4" hidden>
                   <!--доп.услуги-->
-                  <p>Fusce gravida, massa in vehicula semper, arcu metus fringilla justo, quis malesuada ipsum elit ut nibh. Vestibulum aliquet, massa et varius lacinia, tortor turpis tristique neque, sed dignissim quam dolor aliquam tellus. Vivamus molestie, odio nec convallis fringilla, eros quam lacinia tortor, eget dictum turpis dolor vitae erat.</p>
+                  <a class="tab-cont-item-1" href="#">
+                     <img src="img/tab-cont-lesn.png" alt="лестницы">
+                     <div>
+                        <h3>доп.услуги</h3>
+                     </div>
+                     
+                  </a>
+                  <a class="tab-cont-item-2" href="#">
+                     <img src="img/tab-cont-covEl.png" alt="кованые элементы">
+                     <div>
+                        <h3>доп.услуги</h3>
+                     </div>
+                  </a>
+                  <a class="tab-cont-item-3" href="#">
+                     <img src="img/tab-cont-vorot.png" alt="ворота">
+                     <div>
+                        <h3>доп.услуги</h3>
+                     </div>
+                  </a>
+                  <a class="tab-cont-item-4" href="#">
+                     <img src="img/tab-cont-besed.png" alt="беседки">
+                     <div>
+                        <h3>доп.услуги</h3>
+                     </div>
+                  </a>
+                  <a class="tab-cont-item-5" href="#">
+                     <img src="img/tab-cont-zabor.png" alt="заборы">
+                     <div>
+                        <h3>доп.услуги</h3>
+                     </div>
+                  </a>
+                  <a class="tab-cont-item-6" href="#">
+                     <img src="img/tab-cont-krilco.png" alt="крыльцо">
+                     <div>
+                        <h3>доп.услуги</h3>
+                     </div>
+                  </a>
+                  <a class="tab-cont-item-7" href="#">
+                     <img src="img/tab-cont-dveri.png" alt="двери">
+                     <div>
+                        <h3>доп.услуги</h3>
+                     </div>
+                  </a>
+                  <a class="tab-cont-item-8" href="#">
+                     <img src="img/tab-cont-balkon.png" alt="балконы">
+                     <div>
+                        <h3>доп.услуги</h3>
+                     </div>
+                  </a>
                </div>
             </div>            
          </div>
@@ -246,7 +441,7 @@
             <div class="time-work-content-box">
                <h4>давайте созвонимся?</h4>
                <h5>Обсудим Ваш проект <br> и рассчитаем его стоимость</h5>
-               <button class="time-work-content-btn">Обсудить проект</button>
+               <a href="#" class="time-work-content-btn">Обсудить проект</a>
             </div>
          </div>
       </div>
@@ -367,20 +562,18 @@
    <footer class="footer">
       <div class="container footer-flex">
          <div class="footer-left-content">
-            <div>
-               <a href="#" class="header-item__logo">
-                  <img src="img/Ellipse 1.png" alt="логотип">
-                  <h1>Арт Богатырев <br>
-                     <span>художественная ковка</span>
-                  </h1>
-               </a>
-            </div>
-            <div>
-               <a href="">vk</a>
-               <a href="">ins</a>
-               <a href="">ins</a>
-               <a href="">ins</a>
-            </div>
+            <a href="#" class="header-item__logo footer-logo">
+               <img src="img/Ellipse 1.png" alt="логотип">
+               <h1>Арт Богатырев <br>
+                  <span>художественная ковка</span>
+               </h1>
+            </a>
+            <div class="social-flex-wrap">
+               <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+               <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+               <a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+               <a href="#"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+             </div>
          </div>
          <div class="footer-right-cont">
             <ul>
