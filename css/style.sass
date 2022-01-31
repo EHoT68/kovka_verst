@@ -3,6 +3,8 @@
    padding: 0
 
 $color_span: #ff6b00
+$max-img-width: 600px
+$max-img-height: 400px
 
 /* FONTS  */
 
@@ -181,11 +183,12 @@ header
    line-height: 22px
    text-align: center
    padding: 19px 35px
+   cursor: pointer
 
    &:hover
       background: #242424
       color: $color_span
-      border: solid 1px $color_span
+      outline: solid 1px $color_span
 
 .header-item-nav__list
    padding: 15px 0 10px
@@ -203,7 +206,7 @@ header
       padding: 10px
       position: absolute
       z-index: 5
-      width: 200px
+      width: 130px
       display: none
       border-radius: 10px
 
@@ -265,7 +268,10 @@ header
       color: #fff
 
 .banner-adv-flex-box
-   display: flex
+   display: grid
+   grid-template-columns: repeat(3, 1fr)
+   grid-template-rows: repeat(1, 1fr)
+   grid-gap: 10px
    padding: 20px
    background: #242424
    border-radius: 8px
@@ -281,7 +287,7 @@ header
 
    &-title
       margin: 0
-      padding: 5px 30px 5px 20px
+      padding: 5px 10px
       font-style: normal
       font-weight: normal
       font-size: 16px
@@ -540,6 +546,7 @@ header
    background-size: cover
    background-repeat: no-repeat
    position: relative
+   overflow: hidden
 
    &-background-1, &-background-2
       position: absolute
@@ -723,7 +730,835 @@ header
          font-size: 22px
          line-height: 30px
 
+// servic-padge
+
+.servic-top-banner
+   background: url(../img/servis-banner-1.jpg) no-repeat center center/ cover
+   z-index: -5
+   position: relative
+
+.back-gradient
+   background: linear-gradient(70deg, $color_span, #242424)
+   opacity: 0.5
+   filter: blur(100px)
+   position: absolute
+   z-index: -3
+   width: 100%
+   height: 100%
+
+.banner-adv-servic
+   color: #fff
+   padding: 20px
+   background: #242424
+   border-radius: 8px
+   opacity: 0.7
+
+.servic-content-pedge
+   background: #242424
+
+   .servic-box
+      display: grid
+      grid-template-columns: repeat(3, 1fr)
+      grid-template-rows: repeat(7, 1fr)
+      grid-gap: 70px 10px
+      padding-bottom: 80px
+
+      .servis-box-svg
+         height: 300px
+         width: 100%
+         fill: $color_span
+         opacity: 0.7
+         filter: blur(1px)
+
+      .servis-box-svg__revers
+         transform: scaleX(-1)
+
+      &__item
+         grid-column: span 2
+         position: relative
+         height: 300px
+         box-sizing: border-box
+         overflow: hidden
+         display: block
+         align-items: center
+         justify-content: center
+         font-size: 24px
+         font-family: 'Roboto Condensed', sans-serif
+         background: #f274
+         border-radius: 70px 0px
+         box-shadow: 10px 10px 20px rgba(235,152,27,0.5)
+         transition: 1s
+
+         &:hover
+            transform: scale(1.1)
+
+         img
+            width: 100%
+            opacity: 0.7
+            height: 100%
+
+         &:hover .servic-box__item-title
+            top: 160px
+
+         &:hover span
+            display: block
+
+         &-title
+            height: 150px
+            background: #fff
+            text-align: center
+            align-self: center
+            padding: 20px
+            border-radius: 70px 0
+            top: 240px
+            position: absolute
+            transition: 1s
+            opacity: 0.7
+            font-size: 16px
+
+            h3
+               padding-bottom: 17px
+
+         span
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            display: none
+            box-sizing: border-box
+            z-index: 2
+            opacity: 0.8
+
+         span:before
+            content: ''
+            position: absolute
+            width: 100%
+            height: 11px
+            background: $color_span
+            animation: anim-ramka-4 6s linear infinite
+
+   @keyframes anim-ramka-4
+      0%
+         transform: scaleX(0)
+         transform-origin: right
+
+      50%
+         transform: scaleX(1)
+         transform-origin: right
+
+      50.1% 
+         transform: scaleX(1)
+         transform-origin: left
+
+      100%
+         transform: scaleX(0)
+         transform-origin: left
+
+//catalog-padge
+
+.catalog-top-banner
+   background: url(../img/catalog-banner-lestnicy.jpg) no-repeat center center/ cover
+   z-index: -5
+   position: relative
+
+.catalog-box
+   display: grid
+   grid-template-columns: repeat(3, 1fr)
+   grid-template-rows: repeat(2, 1fr)
+   grid-gap: 30px
+   padding: 50px 0
+
+   &-button
+      display: flex
+      padding: 50px 0 20px
+      justify-content: center
+
+      .active
+         border: solid 2px $color_span !important
+
+      .btn-item
+         padding: 12px 30px
+         margin-right: 10px
+         display: flex
+         align-items: center
+         justify-content: center
+         user-select: none
+         cursor: pointer
+         font-size: 16px
+         line-height: 22px
+         text-align: center
+         color: #FFFFFF
+         border: solid 1px #686562
+         background: 0 0
+
+         &:hover
+            background: $color_span
+
+   &-item
+      border-radius: 25px
+      overflow: hidden
+      transition: 1s
+      background: linear-gradient(60deg, #ff6b002e, #242424)
+
+      &:hover
+         transform: scale(1.05)
+         box-shadow: 10px 10px 20px rgba(235,152,27,0.5)
+         border: 0
+
+      p
+         padding: 10px 15px
+
+.fadein
+   position: relative
+   width: 100%
+   overflow: hidden
+   height: 370px
+   margin-bottom: 5px
+   transition: 2s
+
+   & img
+      position: absolute
+      width: 100%
+      left: 0
+      right: 0
+      opacity: 0
+
+   .catalog-box-item:hover & img
+      animation-name: fade
+      animation-duration: 12s
+      animation-iteration-count: infinite
+
+   & img:nth-child(1)
+      opacity: 1
+
+   .catalog-box-item:hover > & img:nth-child(1)
+      animation-delay: 9s
+
+   .catalog-box-item:hover > & img:nth-child(2)
+      animation-delay: 0s
+
+   .catalog-box-item:hover > & img:nth-child(3)
+      animation-delay: 3s
+
+   .catalog-box-item:hover > & img:nth-child(4)
+      animation-delay: 5s
+
+@keyframes fade
+   0%
+      opacity: 0
+
+   11.11%
+      opacity: 1
+
+   33.33%
+      opacity: 1
+
+   44.44%
+      opacity: 0
+
+   100%
+      opacity: 0
+
+//item-padge
+.item-top-banner
+   background: linear-gradient(60deg, #ff6b002e, #242424)
+   border-bottom: 1px solid $color_span
+   border-top: 1px solid $color_span
+
+   .item-baner-title
+      padding: 30px 15px
+
+   h2
+      color: #fff
+      padding: 10px 0
+      font-size: 30px
+
+.cont-item
+   display: flex
+
+.cont-item-left
+   max-width: 50%
+   display: flex
+   flex-direction: column
+   align-items: center
+
+.cont-item-right
+   max-width: 50%
+   padding: 50px 3px 3px 15px
+   text-align: start
+   color: #fff
+
+   &-bottom
+      display: flex
+      justify-content: space-between
+      margin-top: 30px
+      align-items: center
+      padding-left: 50px
+
+      &-title
+         display: flex
+         justify-self: start
+         margin-top: 50px
+         background: linear-gradient(60deg, #ff6b002e, #242424)
+         border: 1px solid #ff6b00
+
+         p
+            text-align: left
+            color: #fff
+            font-size: 14px !important
+            padding: 10px 50px !important
+
+   h2
+      padding: 10px
+      font-size: 40px
+
+   p
+      padding: 10px
+      font-size: 20px
+
+   button
+      background: $color_span
+      color: #fff
+      padding: 19px 50px
+      font-size: 16px
+      cursor: pointer
+      font-weight: bold
+
+      &:hover
+         background: #242424
+         color: $color_span
+         outline: solid 1px $color_span
+
+.overlay
+   opacity: 0
+   visibility: hidden
+   position: fixed
+   left: 0
+   right: 0
+   top: 0
+   bottom: 0
+   z-index: 5
+   background: rgba(0,0,0,0.87)
+
+.dlg-modal
+   width: 100%
+   max-width: 570px
+   height: 300px
+   opacity: 0
+   visibility: hidden
+   text-align: center
+   position: fixed
+   left: 50%
+   z-index: 10
+   padding: 35px 36px
+   background: #fff
+   border-radius: 10px
+   -webkit-box-shadow: 0 0 20px rgba(0,0,0,0.85)
+   box-shadow: 0 0 20px rgba(0,0,0,0.85)
+
+.dlg-modal-fade
+   top: 50%
+   -webkit-transform: translate(-50%, -50%)
+   transform: translate(-50%, -50%)
+
+.dlg-modal-slide
+   top: -20px
+   -webkit-transform: translate(-50%, -100%)
+   transform: translate(-50%, -100%)
+   visibility: visible
+   opacity: 1
+
+.closer
+   width: 40px
+   height: 40px
+   display: block
+   position: absolute
+   right: 10px
+   top: 10px
+   cursor: pointer
+   background: url(../img/cross.jpg) no-repeat
+   transition: 0.5s
+
+.closer:hover
+   transform: rotate(90deg)
+
+.fadeIn, .fadeOut, .slideInDown, .slideOutUp
+   -webkit-animation-duration: 0.4s
+   animation-duration: 0.4s
+   -webkit-animation-timing-function: linear
+   animation-timing-function: linear
+
+@keyframes fadeIn
+   from
+      opacity: 0
+      visibility: hidden
+   to
+      opacity: 1
+      visibility: visible
+
+.fadeIn
+   -webkit-animation-name: fadeIn
+   animation-name: fadeIn
+   opacity: 1
+   visibility: visible
+
+@keyframes fadeOut
+   from
+      opacity: 1
+      visibility: visible
+   to
+      opacity: 0
+      visibility: hidden
+
+.fadeOut
+   -webkit-animation-name: fadeOut
+   animation-name: fadeOut
+   opacity: 0
+   visibility: hidden
+
+@keyframes slideInDown
+   from
+      top: -20px
+      -webkit-transform: translate(-50%, -100%)
+      transform: translate(-50%, -100%)
+   to
+      top: 50%
+      -webkit-transform: translate(-50%, -50%)
+      transform: translate(-50%, -50%)
+
+.slideInDown
+   -webkit-animation-name: slideInDown
+   animation-name: slideInDown
+   top: 50%
+   transform: translate(-50%, -50%)
+
+@keyframes slideOutUp
+   from
+      top: 50%
+      -webkit-transform: translate(-50%, -50%)
+      transform: translate(-50%, -50%)
+   to
+      top: -20px
+      -webkit-transform: translate(-50%, -100%)
+      transform: translate(-50%, -100%)
+
+.slideOutUp
+   -webkit-animation-name: slideOutUp
+   animation-name: slideOutUp
+
+#sync1 .item
+   padding: 50px 3px 20px
+   margin: 5px
+   color: #fff
+   -webkit-border-radius: 3px
+   -moz-border-radius: 3px
+   border-radius: 3px
+   text-align: center
+
+#sync2 .item
+   padding: 10px 0px
+   margin: 5px
+   color: #fff
+   -webkit-border-radius: 3px
+   -moz-border-radius: 3px
+   border-radius: 3px
+   text-align: center
+   cursor: pointer
+   position: relative
+
+   & h1
+      font-size: 18px
+
+#sync2
+   width: 90%
+
+.owl-stage-outer
+   align-content: center
+
+.owl-carousel .owl-stage
+   display: flex
+   align-items: center
+
+#sync2 .current .item
+   transform: scale(1.1)
+   box-shadow: inset 0px 0px 11px 0px rgba(235,152,27,0.5)
+
+.owl-theme .owl-nav
+
+   & .owl-next,
+   & .owl-prev
+      position: absolute
+      top: 20%
+      border-radius: 15px
+      background: #ff6b002e !important
+      transition: 2s
+
+      &:hover > i
+         color: #d6d6d6
+
+      i
+         color: $color_span
+         font-size: 20px
+         padding: 30px 3px
+         transition: 0.5s
+
+      span
+         font-size: 40px !important
+         color: #fff !important
+
+   & [class*="owl-"]
+      transition: all 0.3s ease
+
+   & [class*="owl-"].disabled:hover
+      background-color: #d6d6d6 !important
+
+   & .owl-prev
+      left: -29px
+
+   & .owl-next
+      right: -30px
+
+#sync1.owl-theme
+   position: relative
+
+   & .owl-next,
+
+   & .owl-prev
+      width: 22px
+      height: 40px
+      margin-top: -20px
+      position: absolute
+      top: 50%
+
+   & .owl-prev
+      left: 10px
+
+   & .owl-next
+      right: 10px
+.owl-theme .owl-nav.disabled + .owl-dots
+   display: none
+
+.active
+   span
+      background: $color_span !important
+
+.icon-box
+   display: grid
+   grid-template-columns: repeat(5, 1fr)
+   grid-template-rows: repeat(1, 1fr)
+   grid-gap: 10px
+   padding: 60px 20px
+
+   i
+      font-size: 60px
+      color: $color_span
+      padding: 15px
+      transition: 0.5s
+
+      &:hover
+         color: #d6d6d6
+         transform: scale(0.9)
+
+#magnify
+   display: none
+   position: fixed
+   z-index: 15
+   height: 100%
+   z-index: 15
+   display: flex
+   justify-content: center
+   flex-direction: column
+
+   & img
+      width: 100%
+
+/* затемняющий фон */
+#overlay
+   display: none
+   background: #000
+   position: fixed
+   top: 0
+   left: 0
+   height: 100%
+   width: 100%
+   opacity: 0.5
+   z-index: 10
+
+/* кнопка закрытия */
+#close-popup
+   width: 50px
+   height: 50px
+   border-radius: 15px
+   cursor: pointer
+   position: absolute
+   top: 15px
+   right: 15px
+
+   & i
+      width: 50px
+      height: 50px
+      background: url(../img/cross.jpg) no-repeat center center
+      background-size: 20px 20px
+      display: block
+
+@keyframes rota
+   25%
+      transform: rotate(360deg)
+
+#close-popup:hover
+   animation: rota 4s infinite normal
+   -webkit-animation-iteration-count: 1
+   animation-iteration-count: 1
+
+// blog-padge
+.blog-box
+   display: flex
+   grid-gap: 30px
+   padding: 60px 20px
+   flex-wrap: wrap
+   justify-content: space-between
+
+   &-item
+      max-width: 48%
+      display: flex
+      flex-direction: column
+      overflow: hidden
+      background: linear-gradient(60deg, #ff6b002e, #242424)
+      position: relative
+      padding: 30px
+
+      img
+         position: absolute
+         height: 100%
+         z-index: -1
+         right: 0
+         top: 0
+
+      p
+         padding: 10px 0
+
+//контакт страница
+
+.kotakty-box-top
+   display: flex
+
+   &-item
+      padding: 30px 70px
+      color: #fff
+
+      i
+         font-size: 30px
+         margin-right: 20px
+         color: $color_span
+
+      p
+         padding: 20px 0
+
+      .active
+         border: 2px solid $color_span !important
+
+.btn-maps
+   background: 0 0
+   color: white
+   font-family: Open Sans
+   font-style: normal
+   font-weight: bold
+   font-size: 16px
+   line-height: 22px
+   text-align: center
+   padding: 10px 20px
+   cursor: pointer
+   border: solid 1px $color_span
+
+   &:hover
+      background: $color_span
+
+.kotakty-box-maps
+   position: relative
+   justify-content: space-around
+   display: flex
+   margin-bottom: 450px
+
+   input
+      display: none
+
+.map-cont-right
+   position: absolute
+   top: 70px
+   width: 100%
+
+.map-cont-left
+   position: absolute
+   width: 100%
+   z-index: -5
+   top: 70px
+
+#radioButton
+
+   &:checked ~ .map-cont-left
+      z-index: 5
+
+.kotakty-box-down
+   display: flex
+
+   &-rec
+      padding: 30px 70px
+      color: #fff
+      width: 50%
+
+      h4
+         padding: 10px 0 0
+         font-size: 20px
+
+         i
+            color: $color_span
+            margin-right: 10px
+
+      p
+         padding: 7px 0
+
+// tehnolodgy-padge
+
+.tehnolodgy-box
+   display: flex
+   padding: 70px 0
+   position: relative
+
+   .tehnolodgy-box-item
+      background: #000
+      position: relative
+      overflow: hidden
+      width: 200px
+      box-shadow: -12px -12px 4px 0px rgba(255,107,0,70)
+      transition: 1s
+      border: 1px solid $color_span
+
+      .span-hover
+         padding: 20px
+
+      &:hover
+         transform: scale(1.1)
+         z-index: 2
+
+         .span-hover
+            color: $color_span
+
+      img
+         position: absolute
+         top: 0
+         left: 0
+         opacity: 0.4
+         height: 100%
+
+      h2, p, li
+         z-index: 2
+         color: #fff
+         padding: 10px 20px
+
+      h2
+         font-size: 20px
+
+      p, li
+         font-size: 15px
+
+.bloc-info-teh
+   background: #000
+   display: none
+   z-index: 10
+   position: fixed
+   width: 1130px
+   overflow: hidden
+   border-radius: 20px
+   border: 1px solid $color_span
+   box-shadow: inset 0px 0px 11px 0px rgba(235, 152, 27, 50)
+
+   img
+      border-radius: 20px
+      width: 100%
+      opacity: 0.3
+      position: absolute
+      border-radius: 30px
+
+   h2, p, li
+      padding: 15px 50px
+      color: #fff
+      z-index: 12
+
+.teh-item-100
+   display: block
+
+//о компании страница
+
+.kompany-cont-top
+   background: linear-gradient(60deg, #ff6b002e, #242424)
+   border-bottom: 1px solid $color_span
+   border-top: 1px solid $color_span
+   margin: 50px 0
+
+.kompany-box
+   display: flex
+   justify-content: space-between
+   padding: 50px 0
+   color: #fff
+
+   img
+      padding: 20px
+      width: 50%
+
+   &-item
+      width: 60%
+      padding: 20px
+
+      p
+         padding: 50px
+
+      span
+         color: $color_span
+         padding-right: 5px
+      ul
+         padding: 20px
+
+         li
+            padding: 10px
+
+            i
+               color: $color_span
+               padding: 10px
+               font-size: 20px
+
+.staff-box
+   display: grid
+   grid-template-columns: repeat(4, 1fr)
+   grid-template-rows: repeat(1, 1fr)
+   grid-gap: 10px
+   padding-bottom: 80px
+
+.staff-item
+   background: linear-gradient(60deg, #ff6b002e, #242424)
+   padding: 20px 20px 0
+   box-shadow: inset 0px 0px 11px 0px $color_span
+   color: #fff
+
+   img
+      width: 100%
+
 @media(max-width: 1600px)
+   //окно  всплывающая в технологии
+   .bloc-info-teh
+      width: 930px
+      h2
+         font-size: 17px
+      p, li
+         font-size: 13px
+
+   .tehnolodgy-box .tehnolodgy-box-item
+      h2
+         font-size: 17px
+      p, li
+         font-size: 13px
+
+   //главная
    .container
       width: 960px
       padding: 0 15px
@@ -748,6 +1583,11 @@ header
       width: 409px
       height: 409px
       left: 650px
+
+   //item-padg
+   .icon-box i
+      font-size: 40px
+      padding: 10px
 
 @media(max-width: 1200px)
 
@@ -847,6 +1687,47 @@ header
       left: 650px
 
 @media(max-width: 992px)
+
+   //о компании
+   .kompany-box
+      justify-content: center
+
+   .kompany-box-item-img
+      display: none
+
+   .staff-box
+      grid-template-columns: repeat(2, 1fr)
+      grid-template-rows: repeat(2, 1fr)
+
+   //страница каталога
+
+   .fadein
+      height: 260px
+
+   // страница сервеса
+   .servic-content-pedge .servic-box
+      grid-template-columns: repeat(2, 1fr)
+
+   .servic-content-pedge .servic-box .servis-box-svg
+      display: none
+
+   //окно  всплывающая в технологии
+   .bloc-info-teh
+      width: 690px
+      h2
+         font-size: 13px
+      p, li
+         font-size: 10px
+
+   .tehnolodgy-box .tehnolodgy-box-item
+      h2
+         font-size: 13px
+         padding: 5px 15px
+      p, li
+         font-size: 10px
+         padding: 5px 15px
+
+   //главная
    .container
       width: 720px
       padding: 0 15px
@@ -862,9 +1743,6 @@ header
 
    .top-banner-btn
       padding: 15px 30px
-
-   .banner-adv-flex-box
-      padding: 40px 0 45px
 
    .adv-item-title
       font-size: 12px
@@ -922,7 +1800,7 @@ header
 
             ol
                top: -8px
-               right: -195px
+               right: -125px
 
    .header-item
       flex-wrap: wrap
@@ -1028,7 +1906,7 @@ header
       padding-left: 27px
 
    .time-work-content figure figcaption
-      padding: 0 15px 27px
+      padding: 0 25px 27px
       font-size: 13px
       line-height: 20px
 
@@ -1070,7 +1948,66 @@ header
       font-size: 10px
       top: 27px
 
+   //item-padge
+
+   .owl-theme .owl-nav .owl-next, .owl-theme .owl-nav .owl-prev
+      top: 13%
+
+   .cont-item-right
+      h2
+         font-size: 27px
+
+      p
+         font-size: 13px
+
+      &-bottom
+         padding-left: 10px
+
+         &-title p
+            font-size: 10px !important
+            padding: 10px 30px !important
+
+         h4
+            font-size: 13px
+
+      button
+         font-size: 14px
+         padding: 15px 45px
+
+   .icon-box
+      padding: 30px 5px
+      i
+         font-size: 30px
+
 @media(max-width: 768px)
+   //страница каталога
+
+   .catalog-box
+      grid-gap: 15px
+      grid-template-columns: repeat(2, 1fr)
+
+   .catalog-box-item p
+      font-size: 12px
+
+   .fadein
+      height: 300px
+
+   .catalog-box-button
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      grid-template-rows: repeat(2, 1fr)
+      grid-gap: 10px
+
+   //окно  всплывающая в технологии
+   .bloc-info-teh
+      width: 526px
+
+   .tehnolodgy-box
+      flex-wrap: wrap
+      justify-content: center
+
+   //home
+
    .container
       width: 540px
       padding: 0px 7px
@@ -1135,34 +2072,216 @@ header
       flex-wrap: wrap
       justify-content: center
 
+   .services-title-head
+      padding: 20px 0 15px
+
    .services-title-head-title
       padding: 0 9px
 
+   .tabsmenu
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      grid-template-rows: repeat(2, 1fr)
+      grid-gap: 10px
+
+      li
+         margin-right: 0
+
    .adv-item-title
       text-align: center
+
+   .time-work .time-work-title-head
+      padding: 20px 0 15px
 
    .time-work-content
       grid-template-columns: repeat(2, 1fr)
       grid-template-rows: repeat(3, 1fr)
 
+      figure img
+         top: -12px
+         left: 90px
+
+      figure .figura-pen2
+         top: 0
+         left: 140px
+
+      figure .figura-pen1
+         top: -40px
+         left: 120px
+
+   .calc-order__box-content form button
+      font-size: 14px
+
+   .services-title-head-title
+      font-size: 16px
+      padding: 0 8px
+
+   .down-content-figure-box svg
+      width: 18%
+
+   .services-title-head svg
+      width: 18%
+
+   .calc-order__box-titl
+      padding: 20px 0 15px
+
+   .down-content .figure-box-items
+      grid-template-columns: repeat(1, 1fr)
+      grid-template-rows: repeat(3, 30%)
+
+      figure
+         display: grid
+         grid-template-columns: repeat(2, 1fr)
+         grid-template-rows: repeat(2, 1fr)
+         grid-gap: 10px
+
+         img
+            width: auto
+            grid-row: span 2
+
+         h4
+            align-self: center
+
+         p
+            padding: 0
+
+   .footer-flex
+      flex-direction: column-reverse
+
+   .footer-right-cont
+      width: 100%
+
+   .footer-left-content
+      width: 100%
+      display: flex
+      justify-content: space-between
+      padding: 0 0 15px
+
+      h1 span
+         width: 100%
+
+   .down-content-features p
+      padding: 0 50px 60px
+
+   //item-padge
+
+   .owl-theme .owl-nav .owl-next, .owl-theme .owl-nav .owl-prev
+      display: none
+
+   .cont-item-right-bottom h4
+      font-size: 10px
+
+   .cont-item-right button
+      font-size: 10px
+      padding: 10px 35px
+
+   .cont-item-right-bottom-title
+      margin-top: 30px
+
+   .icon-box
+      padding: 20px 0
+      grid-gap: 5px
+
+      i
+         font-size: 25px
+         padding: 5px
+
+   .owl-theme .owl-nav.disabled + .owl-dots
+      display: block
+
+   #sync2
+      display: none
+
 @media(max-width: 576px)
+   //страница о компании
+   .kompany-box
+      justify-content: start
+
+      &-item
+         width: 100%
+
+   .staff-box
+      grid-template-columns: repeat(1, 1fr)
+      grid-template-rows: repeat(4, 1fr)
+
+   //страница каталога
+   .fadein
+      height: 180px
+
+   .catalog-box-item
+      border-radius: 15px
+
+      p
+         font-size: 9px
+         padding: 5px 7px
+
+   // страница сервеса
+   .servic-content-pedge .servic-box__item
+      height: auto
+
+   .banner-adv-servic
+      font-size: 11px
+
+   .servic-content-pedge .servic-box__item-title
+      top: 98px
+
+   //окно  всплывающая в технологии
+   .bloc-info-teh
+      width: 306px
+
+   //главная
+
    .container
       width: 320px
       padding: 0px 7px
 
-   &-header
-      width: 320px
+   header
+      padding-bottom: 0
 
-   .header-item__logo
-      width: 26%
-      margin: 0 auto
+   .header-item nav
+      padding: 0
+
+   .menu-checkbox-label, .menu-checkbox-label span
+      font-size: 15px
+
+   .top-banner__wrapper
+      padding-bottom: 20px
+
+   .banner-adv-flex-box
+      margin-top: 15px
+
+   .adv-item img
+      display: none
+
+   .adv-item-title
+      font-size: 8px
+      line-height: 10px
+      padding: 2px 10px
+
+   .header__wrapper .header-item
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      grid-template-rows: repeat(2, 1fr)
+      grid-gap: 10px
+
+   .header-item .headr-tel, .btn-call-back
+      position: relative
+      top: auto
+      right: auto
+      font-size: 13px
+      padding: 12px
+
+   .header-item__logo h1
+      padding-left: 5px
+      font-size: 13px
+      padding-top: 0
+
+      span
+         font-size: 7px
+         top: 15px
 
    .header-item__nav
       width: 100%
-
-   .header-item-nav__list
-      justify-content: space-evenly
-      margin: 15px 0
 
    .header-item
       justify-content: center
@@ -1170,10 +2289,127 @@ header
    &-info
       margin-left: 0px
 
-   .services-background-1, .services-background-2
-      filter: blur(160px)
-      width: 150px
-      height: 150px
-      left: 100px
+   .top-banner-title
+      line-height: 25px
+      font-size: 15px
+      padding: 15px 0 5px
 
-//@media(max-width: 478px)
+   .tagline-title
+      font-size: 10px
+      line-height: 15px
+
+   .top-banner-btn
+      padding: 12px
+
+   .tab-cont-box-1 div h3, .tab-cont-box-2 div h3, .tab-cont-box-3 div h3, .tab-cont-box-4 div h3
+      font-size: 18px
+
+   .time-work-title-head svg
+      width: 20%
+
+   .time-work-content
+      grid-template-columns: repeat(1, 1fr)
+      padding-bottom: 30px
+
+   .time-work-content figure img
+      top: -16px
+      width: 50%
+      left: 105px
+
+   .time-work-content > figure .figura-las
+      top: 60px
+
+   .time-work-content > figure .figura-nakov
+      left: 95px
+
+   .calc-order__box-content p
+      font-size: 13px
+      line-height: 20px
+      padding: 0 15px 15px
+
+   .calc-order__box-content form
+      flex-direction: column
+
+      input
+         width: 100%
+         margin-bottom: 10px
+         padding: 15px
+
+      button
+         width: 100%
+         padding: 15px
+
+   .services-title-head-title
+      line-height: 20px
+      text-align: center
+
+   .calc-order__box-content
+      width: 100%
+
+   .down-content-figure-box svg
+      width: auto
+
+   .services-title-head svg
+      width: auto
+
+   .down-content .figure-box-items figure
+      display: flex
+      flex-direction: column
+
+      img
+         display: none
+
+   .down-content-features .down-title-head
+      padding: 30px 0
+
+   .down-content-features p
+      padding: 0 30px 30px
+      font-size: 11px
+
+   .footer-right-cont
+      flex-direction: column
+      padding: 20px 0
+
+      ul
+         display: flex
+         flex-wrap: wrap
+         justify-content: space-between
+
+         li
+            padding: 3px
+
+   .footer-right-cont ol
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      padding-top: 5px
+
+      li
+         padding: 5px 0
+
+   .footer-right-cont ol > li:first-child
+      font-size: 13px
+
+   .footer-right-cont ol > li:last-child
+      grid-column: span 2
+
+   .footer-left-content .footer-logo h1
+      font-size: 15px
+      span
+         font-size: 8px
+         top: 15px
+   .social-flex-wrap
+      padding-top: 0
+
+   .footer-left-content .footer-logo
+      padding-bottom: 5px
+
+   //item-padge
+   .cont-item
+      flex-direction: column
+
+   .cont-item-left
+      max-width: 100%
+
+   .cont-item-right
+      max-width: 100%
+      padding: 20px 3px
